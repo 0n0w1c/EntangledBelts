@@ -1,0 +1,8 @@
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 22. 10. 2024
+  Changes:
+    - Introducing Entangled Belts, the successor to Braidy Belts (now deprecated)
+    - Updated for Factorio 2.0 and Space Age
+  Bugfixes:
+    - None
