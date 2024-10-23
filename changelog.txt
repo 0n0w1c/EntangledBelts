@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 22. 10. 2024
+  Changes:
+    - None
+  Bugfixes:
+    - Express entangled belt upgrades to turbo entangled belt via the upgrade planner
+---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: 22. 10. 2024
   Changes:
