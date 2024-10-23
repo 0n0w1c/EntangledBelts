@@ -1,11 +1,13 @@
-local function clone_item(clone_name, original)
-    local clone = table.deepcopy(data.raw["item"][original])
-    if clone then
-        clone.name = clone_name
-        clone.place_result = clone_name
-        clone.order = data.raw["item"][original].order .. "z"
+local function clone_item(clone, original)
+    local item = table.deepcopy(data.raw["item"][original])
+
+    if item then
+        item.name = clone
+        item.place_result = clone
+        item.order = data.raw["item"][original].order .. "z"
     end
-    return clone
+
+    return item
 end
 
 local entangled_belt = clone_item("entangled-belt", "underground-belt")

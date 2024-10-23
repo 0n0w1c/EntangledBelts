@@ -1,14 +1,16 @@
-local function clone_recipe(clone_name, original)
-    local clone = table.deepcopy(data.raw["recipe"][original])
-    if clone then
-        clone.name = clone_name
-        clone.category = nil
-        clone.always_show_made_in = false
-        clone.energy_required = 0.5
-        clone.ingredients = { { type = "item", name = original, amount = 2 } }
-        clone.results = { { type = "item", name = clone_name, amount = 2 } }
+local function clone_recipe(clone, original)
+    local recipe = table.deepcopy(data.raw["recipe"][original])
+
+    if recipe then
+        recipe.name = clone
+        recipe.category = nil
+        recipe.always_show_made_in = false
+        recipe.energy_required = 0.5
+        recipe.ingredients = { { type = "item", name = original, amount = 2 } }
+        recipe.results = { { type = "item", name = clone, amount = 2 } }
     end
-    return clone
+
+    return recipe
 end
 
 local entangled_belt = clone_recipe("entangled-belt", "underground-belt")

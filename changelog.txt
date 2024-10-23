@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: 22. 10. 2024
+  Changes:
+    - Refactored for consistency and readability, no functional change
+    - Improved the Entangled belt recipe descriptions
+  Bugfixes:
+    - None
+---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 22. 10. 2024
   Changes:

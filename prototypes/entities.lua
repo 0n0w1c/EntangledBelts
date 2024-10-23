@@ -1,11 +1,13 @@
-local function clone_entity(clone_name, original, upgrade)
-    local clone = table.deepcopy(data.raw["underground-belt"][original])
-    if clone then
-        clone.name = clone_name
-        clone.next_upgrade = upgrade
-        clone.minable.result = original
+local function clone_entity(clone, original, upgrade)
+    local entity = table.deepcopy(data.raw["underground-belt"][original])
+
+    if entity then
+        entity.name = clone
+        entity.next_upgrade = upgrade
+        entity.minable.result = original
     end
-    return clone
+
+    return entity
 end
 
 local express_upgrade = nil
