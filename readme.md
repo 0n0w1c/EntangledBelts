@@ -4,3 +4,5 @@
 
 With Entangled Belts, you can braid and weave with same speed underground belts.  
 Simply alternate between pairs of underground belts and entangled belts.  
+
+Entangled belts are crafted from the underground belts and convert back when mined.  
