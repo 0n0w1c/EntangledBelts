@@ -1,11 +1,11 @@
-local function clone_recipe(clone_name, original_name)
-    local clone = table.deepcopy(data.raw["recipe"][original_name])
+local function clone_recipe(clone_name, original)
+    local clone = table.deepcopy(data.raw["recipe"][original])
     if clone then
         clone.name = clone_name
         clone.category = nil
         clone.always_show_made_in = false
         clone.energy_required = 0.5
-        clone.ingredients = { { type = "item", name = original_name, amount = 2 } }
+        clone.ingredients = { { type = "item", name = original, amount = 2 } }
         clone.results = { { type = "item", name = clone_name, amount = 2 } }
     end
     return clone
