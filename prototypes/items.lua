@@ -1,9 +1,20 @@
+local belt_group =
+{
+    type = "item-subgroup",
+    name = "belt-underground",
+    group = "logistics",
+    order = "bb"
+}
+
+data:extend({ belt_group })
+
 local function clone_item(clone, original)
     local item = table.deepcopy(data.raw["item"][original])
 
     if item then
         item.name = clone
         item.place_result = clone
+        item.subgroup = "belt-underground"
         item.order = data.raw["item"][original].order .. "z"
     end
 
