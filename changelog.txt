@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.1
+Date: 04. 01. 2024
+  Changes:
+    - Removed the crafting condition for turbo entangled belts, can now be crafted on any surface
+  Bugfixes:
+    - None
+---------------------------------------------------------------------------------------------------
 Version: 2.1.0
 Date: 17. 12. 2024
   Changes:
