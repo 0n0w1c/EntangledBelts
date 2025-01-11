@@ -3,7 +3,7 @@ local belt_group =
     type = "item-subgroup",
     name = "belt-underground",
     group = "logistics",
-    order = "bb"
+    order = "b[belt]-b[belt-underground]"
 }
 
 data:extend({ belt_group })
