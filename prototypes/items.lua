@@ -6,7 +6,7 @@ local belt_group =
     order = "b[belt]-b[belt-underground]"
 }
 
-data:extend({ belt_group })
+data.extend({ belt_group })
 
 local function clone_item(clone, original)
     local item = table.deepcopy(data.raw["item"][original])
@@ -26,13 +26,21 @@ local fast_entangled_belt = clone_item("fast-entangled-belt", "fast-underground-
 local express_entangled_belt = clone_item("express-entangled-belt", "express-underground-belt")
 
 if entangled_belt and fast_entangled_belt and express_entangled_belt then
-    data:extend { entangled_belt, fast_entangled_belt, express_entangled_belt }
+    data.extend { entangled_belt, fast_entangled_belt, express_entangled_belt }
 end
 
 if mods["space-age"] then
     local turbo_entangled_belt = clone_item("turbo-entangled-belt", "turbo-underground-belt")
 
     if turbo_entangled_belt then
-        data:extend { turbo_entangled_belt }
+        data.extend { turbo_entangled_belt }
+    end
+end
+
+if mods["wood-logistics"] then
+    local wood_entangled_belt = clone_item("wood-entangled-belt", "wood-underground-belt")
+
+    if wood_entangled_belt then
+        data.extend { wood_entangled_belt }
     end
 end

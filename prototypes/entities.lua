@@ -18,13 +18,21 @@ local fast_entangled_belt = clone_entity("fast-entangled-belt", "fast-undergroun
 local express_entangled_belt = clone_entity("express-entangled-belt", "express-underground-belt", express_upgrade)
 
 if entangled_belt and fast_entangled_belt and express_entangled_belt then
-    data:extend { entangled_belt, fast_entangled_belt, express_entangled_belt }
+    data.extend { entangled_belt, fast_entangled_belt, express_entangled_belt }
 end
 
 if mods["space-age"] then
     local turbo_entangled_belt = clone_entity("turbo-entangled-belt", "turbo-underground-belt", nil)
 
     if turbo_entangled_belt then
-        data:extend { turbo_entangled_belt }
+        data.extend { turbo_entangled_belt }
+    end
+end
+
+if mods["wood-logistics"] then
+    local wood_entangled_belt = clone_entity("wood-entangled-belt", "wood-underground-belt", nil)
+
+    if wood_entangled_belt then
+        data.extend { wood_entangled_belt }
     end
 end

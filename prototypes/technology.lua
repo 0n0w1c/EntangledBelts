@@ -6,3 +6,8 @@ if mods["space-age"] then
     table.insert(data.raw['technology']['turbo-transport-belt'].effects,
         { type = "unlock-recipe", recipe = "turbo-entangled-belt" })
 end
+
+if mods["wood-logistics"] then
+    table.insert(data.raw['technology']['wood-logistics'].effects,
+        { type = "unlock-recipe", recipe = "wood-entangled-belt" })
+end

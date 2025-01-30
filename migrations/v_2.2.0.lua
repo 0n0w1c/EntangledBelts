@@ -17,4 +17,8 @@ for index, force in pairs(game.forces) do
     if recipes["turbo-entangled-belt"] and technologies["turbo-transport-belt"] then
         recipes["turbo-entangled-belt"].enabled = technologies["turbo-transport-belt"].researched
     end
+
+    if recipes["wood-entangled-belt"] and technologies["wood-logisitcs"] then
+        recipes["wood-entangled-belt"].enabled = technologies["wood-logistics"].researched
+    end
 end
