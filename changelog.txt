@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.2.1
+Date: 05. 02. 2025
+  Changes:
+    - Improved support for modified underground belts (length, speed, and appearance)
+  Bugfixes:
+    - None
+---------------------------------------------------------------------------------------------------
 Version: 2.2.0
 Date: 30. 01. 2025
   Changes:

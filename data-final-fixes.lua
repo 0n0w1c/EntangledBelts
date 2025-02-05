@@ -1,3 +1,8 @@
+require("prototypes.entities")
+require("prototypes.items")
+require("prototypes.recipes")
+require("prototypes.technology")
+
 data.raw["item"]["underground-belt"].subgroup = "belt-underground"
 data.raw["item"]["fast-underground-belt"].subgroup = "belt-underground"
 data.raw["item"]["express-underground-belt"].subgroup = "belt-underground"
