@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.3.1
+Date: 07. 02. 2025
+  Changes:
+    - None
+  Bugfixes:
+    - Migrate pre-2.3.0 entangled underground belts
+    - Refactored, better to conditionally define the icon array
+---------------------------------------------------------------------------------------------------
 Version: 2.3.0
 Date: 07. 02. 2025
   Changes:

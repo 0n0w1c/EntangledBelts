@@ -16,14 +16,23 @@ for _, item in pairs(original_items) do
                 eb_item.place_result = "eb-" .. item.place_result
             end
             eb_item.order = item.order .. "z"
-            eb_item.localised_name =
-            { "", "[virtual-signal=entangled-belts] ", item.localised_name or { "entity-name." .. item.name } }
+            eb_item.localised_name = {
+                "",
+                "[virtual-signal=entangled-belts] ",
+                item.localised_name or { "entity-name." .. item.name }
+            }
 
             eb_item.icon = nil
+
+            local icon_array = { icon = item.icon }
+            if item.icon_size then
+                icon_array.icon_size = item.icon_size
+            end
+
             eb_item.icons =
             {
-                { icon = item.icon,                                             icon_size = item.icon_size },
-                { icon = "__EntangledBelts__/graphics/icons/white-shuffle.png", icon_size = 32,            scale = 0.5, shift = { -7, -9 } }
+                icon_array,
+                { icon = "__EntangledBelts__/graphics/icons/white-shuffle.png", icon_size = 32, scale = 0.5, shift = { -7, -9 } }
             }
 
             data.extend({ eb_item })
