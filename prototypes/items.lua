@@ -22,8 +22,8 @@ for _, item in pairs(original_items) do
             eb_item.icon = nil
             eb_item.icons =
             {
-                { icon = item.icon,                                              icon_size = item.icon_size },
-                { icon = "__EntangledBelts2__/graphics/icons/white-shuffle.png", icon_size = 32,            scale = 0.5, shift = { -7, -9 } }
+                { icon = item.icon,                                             icon_size = item.icon_size },
+                { icon = "__EntangledBelts__/graphics/icons/white-shuffle.png", icon_size = 32,            scale = 0.5, shift = { -7, -9 } }
             }
 
             data.extend({ eb_item })
