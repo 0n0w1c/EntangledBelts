@@ -19,6 +19,7 @@ for _, underground_belt in pairs(original_belts) do
             eb_entity.next_upgrade = "eb-" .. underground_belt.next_upgrade
         end
         eb_entity.minable.result = underground_belt.name
+
         data.extend({ eb_entity })
     end
 end
