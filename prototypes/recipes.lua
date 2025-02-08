@@ -10,7 +10,7 @@ for _, recipe in pairs(original_recipes) do
         recipe.subgroup = nil
         local eb_recipe = table.deepcopy(recipe)
 
-        if eb_recipe then
+        if eb_recipe and not recipe.hidden then
             eb_recipe.name = "eb-" .. recipe.name
             eb_recipe.category = nil
             eb_recipe.always_show_made_in = false

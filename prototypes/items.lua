@@ -10,7 +10,7 @@ for _, item in pairs(original_items) do
         item.subgroup = "belt-underground"
 
         local eb_item = table.deepcopy(item)
-        if eb_item then
+        if eb_item and not item.hidden then
             eb_item.name = "eb-" .. item.name
             if item.place_result then
                 eb_item.place_result = "eb-" .. item.place_result

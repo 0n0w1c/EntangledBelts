@@ -8,7 +8,7 @@ end
 for _, underground_belt in pairs(original_belts) do
     local eb_entity = table.deepcopy(underground_belt)
 
-    if eb_entity then
+    if eb_entity and not underground_belt.hidden then
         eb_entity.name = "eb-" .. underground_belt.name
         eb_entity.localised_name = {
             "",
