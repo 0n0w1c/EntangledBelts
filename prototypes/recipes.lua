@@ -1,38 +1,38 @@
-local function clone_recipe(clone, original)
-    local recipe = table.deepcopy(data.raw["recipe"][original])
+local recipes = data.raw["recipe"]
+local original_recipes = {}
 
-    if recipe then
-        recipe.name = clone
-        recipe.category = nil
-        recipe.always_show_made_in = false
-        recipe.energy_required = 0.5
-        recipe.ingredients = { { type = "item", name = original, amount = 2 } }
-        recipe.results = { { type = "item", name = clone, amount = 2 } }
-    end
-
-    return recipe
+for _, recipe in pairs(recipes) do
+    table.insert(original_recipes, recipe)
 end
 
-local entangled_belt = clone_recipe("entangled-belt", "underground-belt")
-local fast_entangled_belt = clone_recipe("fast-entangled-belt", "fast-underground-belt")
-local express_entangled_belt = clone_recipe("express-entangled-belt", "express-underground-belt")
+for _, recipe in pairs(original_recipes) do
+    if data.raw["underground-belt"][recipe.name] then
+        recipe.subgroup = nil
+        local eb_recipe = table.deepcopy(recipe)
 
-if entangled_belt and fast_entangled_belt and express_entangled_belt then
-    data.extend { entangled_belt, fast_entangled_belt, express_entangled_belt }
-end
+        if eb_recipe then
+            eb_recipe.name = "eb-" .. recipe.name
+            eb_recipe.category = nil
+            eb_recipe.always_show_made_in = false
+            eb_recipe.energy_required = 0.5
+            eb_recipe.ingredients = { { type = "item", name = recipe.name, amount = 2 } }
+            eb_recipe.results = { { type = "item", name = "eb-" .. recipe.name, amount = 2 } }
+            if recipe.localised_name then
+                eb_recipe.localised_name = {
+                    "",
+                    "[virtual-signal=entangled-belts] ",
+                    recipe.localised_name or { "entity-name." .. recipe.name }
+                }
+            end
 
-if mods["space-age"] then
-    local turbo_entangled_belt = clone_recipe("turbo-entangled-belt", "turbo-underground-belt")
+            eb_recipe.main_product = nil
+            eb_recipe.surface_conditions = nil
 
-    if turbo_entangled_belt then
-        data.extend { turbo_entangled_belt }
-    end
-end
+            if recipe.order then
+                eb_recipe.order = recipe.order .. "z"
+            end
+        end
 
-if mods["wood-logistics"] then
-    local wood_entangled_belt = clone_recipe("wood-entangled-belt", "wood-underground-belt")
-
-    if wood_entangled_belt then
-        data.extend { wood_entangled_belt }
+        data.extend({ eb_recipe })
     end
 end

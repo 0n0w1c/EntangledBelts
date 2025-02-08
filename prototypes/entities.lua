@@ -1,38 +1,25 @@
-local function clone_entity(clone, original, upgrade)
-    local entity = table.deepcopy(data.raw["underground-belt"][original])
+local underground_belts = data.raw["underground-belt"]
+local original_belts = {}
 
-    if entity then
-        entity.name = clone
-        entity.next_upgrade = upgrade
-        entity.minable.result = original
-    end
-
-    return entity
+for _, belt in pairs(underground_belts) do
+    table.insert(original_belts, belt)
 end
 
-local express_upgrade = nil
-if mods["space-age"] then express_upgrade = "turbo-entangled-belt" end
+for _, underground_belt in pairs(original_belts) do
+    local eb_entity = table.deepcopy(underground_belt)
 
-local entangled_belt = clone_entity("entangled-belt", "underground-belt", "fast-entangled-belt")
-local fast_entangled_belt = clone_entity("fast-entangled-belt", "fast-underground-belt", "express-entangled-belt")
-local express_entangled_belt = clone_entity("express-entangled-belt", "express-underground-belt", express_upgrade)
+    if eb_entity then
+        eb_entity.name = "eb-" .. underground_belt.name
+        eb_entity.localised_name = {
+            "",
+            "[virtual-signal=entangled-belts] ",
+            underground_belt.localised_name or { "entity-name." .. underground_belt.name }
+        }
+        if underground_belt.next_upgrade then
+            eb_entity.next_upgrade = "eb-" .. underground_belt.next_upgrade
+        end
+        eb_entity.minable.result = underground_belt.name
 
-if entangled_belt and fast_entangled_belt and express_entangled_belt then
-    data.extend { entangled_belt, fast_entangled_belt, express_entangled_belt }
-end
-
-if mods["space-age"] then
-    local turbo_entangled_belt = clone_entity("turbo-entangled-belt", "turbo-underground-belt", nil)
-
-    if turbo_entangled_belt then
-        data.extend { turbo_entangled_belt }
-    end
-end
-
-if mods["wood-logistics"] then
-    local wood_entangled_belt = clone_entity("wood-entangled-belt", "wood-underground-belt", nil)
-
-    if wood_entangled_belt then
-        data.extend { wood_entangled_belt }
+        data.extend({ eb_entity })
     end
 end

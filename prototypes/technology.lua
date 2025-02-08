@@ -1,13 +1,17 @@
-table.insert(data.raw['technology']['logistics'].effects, { type = "unlock-recipe", recipe = "entangled-belt" })
-table.insert(data.raw['technology']['logistics-2'].effects, { type = "unlock-recipe", recipe = "fast-entangled-belt" })
-table.insert(data.raw['technology']['logistics-3'].effects, { type = "unlock-recipe", recipe = "express-entangled-belt" })
+local technologies = data.raw["technology"]
+local underground_belts = data.raw["underground-belt"]
 
-if mods["space-age"] then
-    table.insert(data.raw['technology']['turbo-transport-belt'].effects,
-        { type = "unlock-recipe", recipe = "turbo-entangled-belt" })
-end
+for _, technology in pairs(technologies) do
+    if technology.effects then
+        local effects_copy = {}
+        for _, effect in pairs(technology.effects) do
+            table.insert(effects_copy, effect)
+        end
 
-if mods["wood-logistics"] then
-    table.insert(data.raw['technology']['wood-logistics'].effects,
-        { type = "unlock-recipe", recipe = "wood-entangled-belt" })
+        for _, effect in pairs(effects_copy) do
+            if effect.type == "unlock-recipe" and underground_belts[effect.recipe] then
+                table.insert(technology.effects, { type = "unlock-recipe", recipe = "eb-" .. effect.recipe })
+            end
+        end
+    end
 end

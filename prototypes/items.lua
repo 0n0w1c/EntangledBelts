@@ -1,46 +1,32 @@
-local belt_group =
-{
-    type = "item-subgroup",
-    name = "belt-underground",
-    group = "logistics",
-    order = "b[belt]-b[belt-underground]"
-}
+local items = data.raw["item"]
+local original_items = {}
 
-data.extend({ belt_group })
+for _, item in pairs(items) do
+    table.insert(original_items, item)
+end
 
-local function clone_item(clone, original)
-    local item = table.deepcopy(data.raw["item"][original])
-
-    if item then
-        item.name = clone
-        item.place_result = clone
+for _, item in pairs(original_items) do
+    if data.raw["underground-belt"][item.name] then
         item.subgroup = "belt-underground"
-        item.order = data.raw["item"][original].order .. "z"
-    end
 
-    return item
-end
+        local eb_item = table.deepcopy(item)
+        if eb_item then
+            eb_item.name = "eb-" .. item.name
+            if item.place_result then
+                eb_item.place_result = "eb-" .. item.place_result
+            end
+            eb_item.order = item.order .. "z"
+            eb_item.localised_name =
+            { "", "[virtual-signal=entangled-belts] ", item.localised_name or { "entity-name." .. item.name } }
 
-local entangled_belt = clone_item("entangled-belt", "underground-belt")
-local fast_entangled_belt = clone_item("fast-entangled-belt", "fast-underground-belt")
-local express_entangled_belt = clone_item("express-entangled-belt", "express-underground-belt")
+            eb_item.icon = nil
+            eb_item.icons =
+            {
+                { icon = item.icon,                                              icon_size = item.icon_size },
+                { icon = "__EntangledBelts2__/graphics/icons/white-shuffle.png", icon_size = 32,            scale = 0.5, shift = { -7, -9 } }
+            }
 
-if entangled_belt and fast_entangled_belt and express_entangled_belt then
-    data.extend { entangled_belt, fast_entangled_belt, express_entangled_belt }
-end
-
-if mods["space-age"] then
-    local turbo_entangled_belt = clone_item("turbo-entangled-belt", "turbo-underground-belt")
-
-    if turbo_entangled_belt then
-        data.extend { turbo_entangled_belt }
-    end
-end
-
-if mods["wood-logistics"] then
-    local wood_entangled_belt = clone_item("wood-entangled-belt", "wood-underground-belt")
-
-    if wood_entangled_belt then
-        data.extend { wood_entangled_belt }
+            data.extend({ eb_item })
+        end
     end
 end

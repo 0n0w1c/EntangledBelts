@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.3.0
+Date: 07. 02. 2025
+  Changes:
+    - Added identifiable icons for the entangled underground belts, per the suggestion of hoochie
+    - Entangled belts are now named with a symbol followed by the original underground belt name
+    - Added support for modded underground belts
+  Bugfixes:
+    - None
+---------------------------------------------------------------------------------------------------
 Version: 2.2.1
 Date: 05. 02. 2025
   Changes:
