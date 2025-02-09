@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.4.0
+Date: 08. 02. 2025
+  Changes:
+    - Added a startup option to enable the "No Long-handed Inserter Challenge" (default: disabled)
+  Bugfixes:
+    - None
+---------------------------------------------------------------------------------------------------
 Version: 2.3.2
 Date: 08. 02. 2025
   Changes:
