@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.4.1
+Date: 15. 02. 2025
+  Changes:
+    - None
+  Bugfixes:
+    - Set next_upgrade to nil for the long-handed inserter when the challenge is accepted
+---------------------------------------------------------------------------------------------------
 Version: 2.4.0
 Date: 08. 02. 2025
   Changes:
