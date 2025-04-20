@@ -16,7 +16,8 @@ for _, item in pairs(original_items) do
                 eb_item.place_result = "eb-" .. item.place_result
             end
             eb_item.order = item.order .. "z"
-            eb_item.localised_name = {
+            eb_item.localised_name =
+            {
                 "",
                 "[virtual-signal=entangled-belts] ",
                 item.localised_name or { "entity-name." .. item.name }

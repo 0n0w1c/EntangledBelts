@@ -1,9 +1,12 @@
 {
     "name": "EntangledBelts",
-    "version": "2.4.1",
+    "version": "2.4.2",
     "title": "Entangled Belts",
     "author": "0n0w1c",
     "factorio_version": "2.0",
     "description": "Clones the underground belts, useful for belt braiding.",
-    "dependencies": []
+    "dependencies": [
+        "base",
+        "(?) bobinserters"
+    ]
 }

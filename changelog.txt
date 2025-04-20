@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.4.2
+Date: 19. 04. 2025
+  Changes:
+    - If Bob's Logisitics is active, the No long handed inserter challenge is unavailable
+  Bugfixes:
+    - Crash if Bob's Logisitcs is active and the No long handed inserter challenge is enabled
+---------------------------------------------------------------------------------------------------
 Version: 2.4.1
 Date: 15. 02. 2025
   Changes:

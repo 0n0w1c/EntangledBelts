@@ -18,7 +18,8 @@ for _, recipe in pairs(original_recipes) do
             eb_recipe.ingredients = { { type = "item", name = recipe.name, amount = 2 } }
             eb_recipe.results = { { type = "item", name = "eb-" .. recipe.name, amount = 2 } }
             if recipe.localised_name then
-                eb_recipe.localised_name = {
+                eb_recipe.localised_name =
+                {
                     "",
                     "[virtual-signal=entangled-belts] ",
                     recipe.localised_name or { "entity-name." .. recipe.name }

@@ -10,7 +10,8 @@ local virtual_signal =
 {
     type = "virtual-signal",
     name = "entangled-belts",
-    icons = {
+    icons =
+    {
         {
             icon = "__core__/graphics/icons/mip/shuffle.png",
             icon_size = 32

@@ -3,13 +3,25 @@ require("prototypes.items")
 require("prototypes.recipes")
 require("prototypes.technology")
 
-if settings.startup["eb-no-red-inserter-challenge"] then
-    local challenge_accepted = settings.startup["eb-no-red-inserter-challenge"].value
+local setting = settings.startup["eb-no-red-inserter-challenge"]
+local challenge_accepted = not mods["boblogistics"] and setting and setting.value
 
-    if challenge_accepted then
-        data.raw["inserter"]["long-handed-inserter"].hidden = challenge_accepted
+if challenge_accepted then
+    if data.raw["inserter"]["long-handed-inserter"] then
+        data.raw["inserter"]["long-handed-inserter"].hidden = true
         data.raw["inserter"]["long-handed-inserter"].next_upgrade = nil
-        data.raw["item"]["long-handed-inserter"].hidden = challenge_accepted
-        data.raw["recipe"]["long-handed-inserter"].hidden = challenge_accepted
+    end
+
+    if data.raw["item"]["long-handed-inserter"] then
+        data.raw["item"]["long-handed-inserter"].hidden = true
+    end
+
+    if data.raw["recipe"]["long-handed-inserter"] then
+        data.raw["recipe"]["long-handed-inserter"].hidden = true
+    end
+
+    if mods["bobinserters"] then
+        data.raw["technology"]["bob-long-inserters-1"] = nil
+        data.raw["technology"]["bob-long-inserters-2"] = nil
     end
 end

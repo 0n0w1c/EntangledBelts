@@ -10,7 +10,8 @@ for _, underground_belt in pairs(original_belts) do
 
     if eb_entity and not underground_belt.hidden then
         eb_entity.name = "eb-" .. underground_belt.name
-        eb_entity.localised_name = {
+        eb_entity.localised_name =
+        {
             "",
             "[virtual-signal=entangled-belts] ",
             underground_belt.localised_name or { "entity-name." .. underground_belt.name }
