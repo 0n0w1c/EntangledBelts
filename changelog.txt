@@ -4,7 +4,7 @@ Date: 20.04.2025
   Changes:
     - None
   Bugfixes:
-    - Bob's Power: do not modify the group for underground belts
+    - Bob's Logistics: do not modify the group for underground belts
 ---------------------------------------------------------------------------------------------------
 Version: 2.4.2
 Date: 19.04.2025
