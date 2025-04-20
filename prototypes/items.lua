@@ -7,7 +7,9 @@ end
 
 for _, item in pairs(original_items) do
     if data.raw["underground-belt"][item.name] then
-        item.subgroup = "belt-underground"
+        if not mods["boblogistics"] then
+            item.subgroup = "belt-underground"
+        end
 
         local eb_item = table.deepcopy(item)
         if eb_item and not item.hidden then

@@ -1,34 +1,41 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.4.3
+Date: 20.04.2025
+  Changes:
+    - None
+  Bugfixes:
+    - Bob's Power: do not modify the group for underground belts
+---------------------------------------------------------------------------------------------------
 Version: 2.4.2
-Date: 19. 04. 2025
+Date: 19.04.2025
   Changes:
     - If Bob's Logisitics is active, the No long handed inserter challenge is unavailable
   Bugfixes:
     - Crash if Bob's Logisitics is active and the No long handed inserter challenge is enabled
 ---------------------------------------------------------------------------------------------------
 Version: 2.4.1
-Date: 15. 02. 2025
+Date: 15.02.2025
   Changes:
     - None
   Bugfixes:
     - Set next_upgrade to nil for the long-handed inserter when the challenge is accepted
 ---------------------------------------------------------------------------------------------------
 Version: 2.4.0
-Date: 08. 02. 2025
+Date: 08.02.2025
   Changes:
     - Added a startup option to enable the "No Long-handed Inserter Challenge" (default: disabled)
   Bugfixes:
     - None
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.2
-Date: 08. 02. 2025
+Date: 08.02.2025
   Changes:
     - None
   Bugfixes:
     - Load error when Circuit-Controlled Routers is active
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.1
-Date: 07. 02. 2025
+Date: 07.02.2025
   Changes:
     - None
   Bugfixes:
@@ -36,7 +43,7 @@ Date: 07. 02. 2025
     - Refactored, better to conditionally define the icon array
 ---------------------------------------------------------------------------------------------------
 Version: 2.3.0
-Date: 07. 02. 2025
+Date: 07.02.2025
   Changes:
     - Added identifiable icons for the entangled underground belts, per the suggestion of hoochie
     - Entangled belts are now named with a symbol followed by the original underground belt name
@@ -45,42 +52,42 @@ Date: 07. 02. 2025
     - None
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.1
-Date: 05. 02. 2025
+Date: 05.02.2025
   Changes:
     - Improved support for modified underground belts (length, speed, and appearance)
   Bugfixes:
     - None
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.0
-Date: 30. 01. 2025
+Date: 30.01.2025
   Changes:
     - Added support for Wooden Logistics
   Bugfixes:
     - None
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.2
-Date: 11. 01. 2025
+Date: 11.01.2025
   Changes:
     - Slight modifification to the separate subgroup, sorts more closely following transport belts
   Bugfixes:
     - None
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.1
-Date: 04. 01. 2025
+Date: 04.01.2025
   Changes:
     - Removed the crafting condition for turbo entangled belts, can be crafted on any surface
   Bugfixes:
     - None
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.0
-Date: 17. 12. 2024
+Date: 17.12.2024
   Changes:
     - Underground and entangled belts are now assigned to a separate subgroup
   Bugfixes:
     - None
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
-Date: 22. 10. 2024
+Date: 22.10.2024
   Changes:
     - Refactored for consistency and readability, no functional change
     - Improved the Entangled belt recipe descriptions
@@ -88,14 +95,14 @@ Date: 22. 10. 2024
     - None
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
-Date: 22. 10. 2024
+Date: 22.10.2024
   Changes:
     - None
   Bugfixes:
     - Express entangled belt upgrades to turbo entangled belt via the upgrade planner
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
-Date: 22. 10. 2024
+Date: 22.10.2024
   Changes:
     - Introducing Entangled Belts, the successor to Braidy Belts (now deprecated)
     - Updated for Factorio 2.0 and Space Age
