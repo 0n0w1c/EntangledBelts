@@ -13,4 +13,4 @@ Safe to enable and disable at anytime, does not destroy existing inserters.
 
 Compatible with most mods that modify or add underground belts.  
 
-Note: If Bob's Logistics is installed, the challenge option is unavailable.
+Note: If Bob's Logistics and the inserter overhaul is active, the challenge option will be ignored.  
