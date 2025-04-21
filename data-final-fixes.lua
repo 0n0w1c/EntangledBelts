@@ -4,9 +4,12 @@ require("prototypes.recipes")
 require("prototypes.technology")
 
 local setting = settings.startup["eb-no-red-inserter-challenge"]
-local challenge_accepted = not mods["boblogistics"] and setting and setting.value
+local challenge_accepted = setting and setting.value
 
-if challenge_accepted then
+setting = settings.startup["bobmods-logistics-inserteroverhaul"]
+local inserter_overhaul = setting and setting.value
+
+if challenge_accepted and not inserter_overhaul then
     if data.raw["inserter"]["long-handed-inserter"] then
         data.raw["inserter"]["long-handed-inserter"].hidden = true
         data.raw["inserter"]["long-handed-inserter"].next_upgrade = nil
@@ -20,8 +23,13 @@ if challenge_accepted then
         data.raw["recipe"]["long-handed-inserter"].hidden = true
     end
 
-    if mods["bobinserters"] then
-        data.raw["technology"]["bob-long-inserters-1"] = nil
-        data.raw["technology"]["bob-long-inserters-2"] = nil
+    if mods["bobinserters"] or mods["boblogistics"] then
+        if data.raw["technology"]["bob-long-inserters-1"] then
+            data.raw["technology"]["bob-long-inserters-1"] = nil
+        end
+
+        if data.raw["technology"]["bob-long-inserters-2"] then
+            data.raw["technology"]["bob-long-inserters-2"] = nil
+        end
     end
 end

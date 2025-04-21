@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.4.4
+Date: 21.04.2025
+  Changes:
+    - Bob's Logistics: No long handed inserter challenge is now conditionally available
+      Bob's Logistics startup setting for the inserter overhaul is honored, if active, 
+      the No long handed inserter challenge will not be active (startup setting will be ignored)
+  Bugfixes:
+    - None
+---------------------------------------------------------------------------------------------------
 Version: 2.4.3
 Date: 20.04.2025
   Changes:

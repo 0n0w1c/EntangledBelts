@@ -1,5 +1,3 @@
-if mods["boblogisitcs"] then return end
-
 data:extend
 ({
     {
