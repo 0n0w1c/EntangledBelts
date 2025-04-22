@@ -27,16 +27,38 @@ for _, item in pairs(original_items) do
 
             eb_item.icon = nil
 
-            local icon_array = { icon = item.icon }
-            if item.icon_size then
-                icon_array.icon_size = item.icon_size
+            local icons = {}
+
+            if item.icons then
+                for _, icon in ipairs(item.icons) do
+                    table.insert(icons, icon)
+                end
+            elseif item.icon then
+                table.insert
+                (
+                    icons,
+                    {
+                        icon = item.icon,
+                        icon_size = item.icon_size or 64,
+                        scale = item.icon_scale,
+                        shift = item.icon_shift,
+                        tint = item.icon_tint
+                    }
+                )
             end
 
-            eb_item.icons =
-            {
-                icon_array,
-                { icon = "__EntangledBelts__/graphics/icons/white-shuffle.png", icon_size = 32, scale = 0.5, shift = { -7, -9 } }
-            }
+            table.insert
+            (
+                icons,
+                {
+                    icon = "__EntangledBelts__/graphics/icons/white-shuffle.png",
+                    icon_size = 32,
+                    scale = 0.5,
+                    shift = { -8, -8 }
+                }
+            )
+
+            eb_item.icons = icons
 
             data.extend({ eb_item })
         end
