@@ -19,4 +19,5 @@ local virtual_signal =
     },
     hidden = true
 }
+
 data.extend({ belt_group, virtual_signal })

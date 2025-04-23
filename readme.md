@@ -8,8 +8,8 @@ Simply alternate between pairs of underground belts and entangled belts.
 
 Entangled belts are crafted from underground belts and revert when mined.  
 
-Startup option to enable the *No Long-handed Inserter Challenge*.
-Safe to enable and disable at anytime, does not destroy existing inserters.
+Startup option to enable the *No Long-handed Inserter Challenge*,
+the most coveted of all achievements... well, maybe not the most.
 
 Compatible with most mods that modify or add underground belts.  
 

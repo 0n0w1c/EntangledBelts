@@ -32,4 +32,30 @@ if challenge_accepted and not inserter_overhaul then
             data.raw["technology"]["bob-long-inserters-2"] = nil
         end
     end
+
+    local function make_no_long_handed_inserters_achievement(name, condition)
+        return
+        {
+            type = "dont-build-entity-achievement",
+            name = "eb-" .. name,
+            dont_build = "long-handed-inserter",
+            objective_condition = condition,
+            allowed_without_fight = true,
+            icon = "__EntangledBelts__/graphics/achievement/no-long-handed-inserters.png",
+            icon_size = 128,
+            order = "g[mod-achievements]-[no-red-inserters]",
+        }
+    end
+
+    if mods["space-age"] then
+        data:extend
+        ({
+            make_no_long_handed_inserters_achievement("no-long-handed-inserters-space-age", "game-finished")
+        })
+    else
+        data:extend
+        ({
+            make_no_long_handed_inserters_achievement("no-long-handed-inserters", "rocket-launched")
+        })
+    end
 end
