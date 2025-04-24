@@ -2,7 +2,7 @@
 Version: 2.5.1
 Date: 23.04.2025
   Changes:
-    - Updated the icon for the "short-armed it" achievement
+    - Updated the icon for the "Short-armed it" achievement
   Bugfixes:
     - None
 ---------------------------------------------------------------------------------------------------

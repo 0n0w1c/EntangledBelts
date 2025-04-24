@@ -21,7 +21,7 @@ for _, item in pairs(original_items) do
             eb_item.localised_name =
             {
                 "",
-                "[virtual-signal=entangled-belts] ",
+                "[virtual-signal=entangled-belts]",
                 item.localised_name or { "entity-name." .. item.name }
             }
 
