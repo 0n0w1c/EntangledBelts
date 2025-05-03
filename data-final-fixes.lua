@@ -33,6 +33,33 @@ if challenge_accepted and not inserter_overhaul then
         end
     end
 
+    if mods["Krastorio2"] then
+        if data.raw["inserter"]["kr-superior-long-inserter"] then
+            data.raw["inserter"]["kr-superior-long-inserter"].hidden = true
+            data.raw["inserter"]["kr-superior-long-inserter"].next_upgrade = nil
+        end
+
+        if data.raw["item"]["kr-superior-long-inserter"] then
+            data.raw["item"]["kr-superior-long-inserter"].hidden = true
+        end
+
+        if data.raw["recipe"]["kr-superior-long-inserter"] then
+            data.raw["recipe"]["kr-superior-long-inserter"].hidden = true
+        end
+
+        if data.raw["technology"]["kr-superior-inserters"] then
+            local technology = data.raw["technology"]["kr-superior-inserters"]
+            if technology and technology.effects then
+                for i = #technology.effects, 1, -1 do
+                    local effect = technology.effects[i]
+                    if effect.type == "unlock-recipe" and effect.recipe == "kr-superior-long-inserter" then
+                        table.remove(technology.effects, i)
+                    end
+                end
+            end
+        end
+    end
+
     local function make_no_long_handed_inserters_achievement(name, condition)
         return
         {
