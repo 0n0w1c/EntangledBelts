@@ -2,7 +2,7 @@
 Version: 2.5.2
 Date: 02.05.2025
   Changes:
-    - Added support for Krastorio2 and the No long handed inserter challenge
+    - Added support for Krastorio2 and the No long-handed inserter challenge
   Bugfixes:
     - None
 ---------------------------------------------------------------------------------------------------
@@ -30,9 +30,9 @@ Date: 21.04.2025
 Version: 2.4.4
 Date: 21.04.2025
   Changes:
-    - Bob's Logistics: No long handed inserter challenge is now conditionally available
+    - Bob's Logistics: No long-handed inserter challenge is now conditionally available
       Bob's Logistics startup setting for the inserter overhaul is honored, if active, 
-      the No long handed inserter challenge will not be active (startup setting will be ignored)
+      the No long-handed inserter challenge will not be active (startup setting will be ignored)
   Bugfixes:
     - None
 ---------------------------------------------------------------------------------------------------
@@ -46,9 +46,9 @@ Date: 20.04.2025
 Version: 2.4.2
 Date: 19.04.2025
   Changes:
-    - If Bob's Logisitics is active, the No long handed inserter challenge is unavailable
+    - If Bob's Logisitics is active, the No long-handed inserter challenge is unavailable
   Bugfixes:
-    - Crash if Bob's Logisitics is active and the No long handed inserter challenge is enabled
+    - Crash if Bob's Logisitics is active and the No long-handed inserter challenge is enabled
 ---------------------------------------------------------------------------------------------------
 Version: 2.4.1
 Date: 15.02.2025
