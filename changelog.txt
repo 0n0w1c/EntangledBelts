@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.5.3
+Date: 04.05.2025
+  Changes:
+    - Added support for Krastorio2 Spaced Out and the No Long-handed Inserter Challenge
+  Bugfixes:
+    - None
+---------------------------------------------------------------------------------------------------
 Version: 2.5.2
 Date: 02.05.2025
   Changes:

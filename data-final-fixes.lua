@@ -33,7 +33,7 @@ if challenge_accepted and not inserter_overhaul then
         end
     end
 
-    if mods["Krastorio2"] then
+    if mods["Krastorio2"] or mods["Krastorio2-spaced-out"] then
         if data.raw["inserter"]["kr-superior-long-inserter"] then
             data.raw["inserter"]["kr-superior-long-inserter"].hidden = true
             data.raw["inserter"]["kr-superior-long-inserter"].next_upgrade = nil
