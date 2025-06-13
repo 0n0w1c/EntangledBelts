@@ -13,8 +13,10 @@ local virtual_signal =
     icons =
     {
         {
-            icon = "__core__/graphics/icons/mip/shuffle.png",
-            icon_size = 32
+            icon = "__EntangledBelts__/graphics/icons/small-shuffle.png",
+            icon_size = 32,
+            mipmap_count = 2,
+            scale = 0.5
         }
     },
     hidden = true
