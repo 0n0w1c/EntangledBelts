@@ -6,9 +6,10 @@ Up for the "No Long-handed Inserter Challenge"?
 With Entangled Belts, you can braid with same-speed underground belts.  
 Simply alternate between pairs of underground belts and entangled belts.  
 
+Entangled belts are crafted from underground belts and revert when mined.
+
 Startup setting to use a traditional recipe and mined result (default: disabled).  
-Startup setting to enable the *No Long-handed Inserter Challenge* (default: disabled),  
-the most coveted of all achievements... well, maybe not the most.  
+Startup setting to enable the *No Long-handed Inserter Challenge* (default: disabled).  
 
 Compatible with most mods that modify or add underground belts.  
 
