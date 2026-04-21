@@ -61,8 +61,7 @@ if challenge_accepted and not inserter_overhaul then
     end
 
     local function make_no_long_handed_inserters_achievement(name, condition)
-        return
-        {
+        return {
             type = "dont-build-entity-achievement",
             name = "eb-" .. name,
             dont_build = "long-handed-inserter",

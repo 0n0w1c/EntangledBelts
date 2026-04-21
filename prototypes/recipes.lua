@@ -3,6 +3,26 @@ if mods["quality"] then
     recycling = require("__quality__/prototypes/recycling")
 end
 
+local function replace_underground_belt_ingredients(ingredients)
+    if not ingredients then return end
+
+    for _, ingredient in pairs(ingredients) do
+        if ingredient.type == nil then
+            ingredient.type = "item"
+        end
+
+        if ingredient.type == "item" and ingredient.name then
+            local item = data.raw["item"][ingredient.name]
+            if item and item.place_result and data.raw["underground-belt"][item.place_result] then
+                local eb_name = "eb-" .. ingredient.name
+                if data.raw["item"][eb_name] then
+                    ingredient.name = eb_name
+                end
+            end
+        end
+    end
+end
+
 local original_recipes = {}
 
 for _, recipe in pairs(data.raw["recipe"]) do
@@ -28,6 +48,16 @@ for _, recipe in pairs(original_recipes) do
     eb_recipe.result = nil
 
     if settings.startup["eb-make-traditional"].value then
+        replace_underground_belt_ingredients(eb_recipe.ingredients)
+
+        if eb_recipe.normal then
+            replace_underground_belt_ingredients(eb_recipe.normal.ingredients)
+        end
+
+        if eb_recipe.expensive then
+            replace_underground_belt_ingredients(eb_recipe.expensive.ingredients)
+        end
+
         eb_recipe.results = {
             { type = "item", name = eb_recipe.name, amount = 2 }
         }

@@ -10,6 +10,7 @@ Entangled belts are crafted from underground belts and revert when mined.
 
 Startup setting to use a traditional recipe and mined result (default: disabled).  
 Startup setting to enable the *No Long-handed Inserter Challenge* (default: disabled).  
+Startup settings to adjust the display time for the overlay (disabled = 0, maximum = 60)
 
 Compatible with most mods that modify or add underground belts.  
 

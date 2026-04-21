@@ -13,13 +13,21 @@ local virtual_signal =
     icons =
     {
         {
-            icon = "__EntangledBelts__/graphics/icons/small-shuffle.png",
+            icon = "__EntangledBelts__/graphics/icons/dark-shuffle.png",
             icon_size = 32,
-            mipmap_count = 2,
             scale = 0.5
         }
     },
     hidden = true
 }
 
-data.extend({ belt_group, virtual_signal })
+local white_shuffle_sprite =
+{
+    type = "sprite",
+    name = "eb-white-shuffle",
+    filename = "__EntangledBelts__/graphics/icons/white-shuffle.png",
+    height = 32,
+    width = 32
+}
+
+data.extend({ belt_group, virtual_signal, white_shuffle_sprite })
