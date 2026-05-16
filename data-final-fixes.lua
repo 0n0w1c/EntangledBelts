@@ -23,6 +23,12 @@ if challenge_accepted and not inserter_overhaul then
         data.raw["recipe"]["long-handed-inserter"].hidden = true
     end
 
+    if mods["IR3_Assets_steamworks"] then
+        data.raw["inserter"]["long-handed-steam-inserter"].hidden = true
+        data.raw["item"]["long-handed-steam-inserter"].hidden = true
+        data.raw["recipe"]["long-handed-steam-inserter"].hidden = true
+    end
+
     if mods["bobinserters"] or mods["boblogistics"] then
         if data.raw["technology"]["bob-long-inserters-1"] then
             data.raw["technology"]["bob-long-inserters-1"] = nil
