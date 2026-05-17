@@ -80,24 +80,8 @@ for _, recipe in pairs(original_recipes) do
     eb_recipe.icons = table.deepcopy(eb_item.icons)
     eb_recipe.order = (eb_item.order or "") .. "z"
 
-    eb_recipe.localised_name = {
-        "",
-        "[virtual-signal=entangled-belts]",
-        { "entity-name." .. recipe.name }
-    }
-
     data:extend({ eb_recipe })
 
-    -- Allow recycling for all generated eb recipes.
-    -- Quality mod special case:
-    -- The recycling generator blocks most "metallurgy" recipes unless they are explicitly whitelisted
-    -- (e.g. turbo belts in vanilla). Our "eb-*" variants do not match that whitelist, so they would
-    -- normally be skipped and never get recycling recipes.
-    --
-    -- To work around this, we pass a custom filter function that re-allows our specific recipe.
-    -- Non-metallurgy recipes are unaffected and always allowed.
-    --
-    -- Yes, this is hacky, but it's the intended extension point of generate_recycling_recipe().
     if mods["quality"] and settings.startup["eb-make-traditional"].value then
         recycling.generate_recycling_recipe(data.raw["recipe"][eb_recipe.name],
             function()

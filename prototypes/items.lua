@@ -22,12 +22,6 @@ for _, item in pairs(original_items) do
     eb_item.name = "eb-" .. item.name
     eb_item.place_result = "eb-" .. item.place_result
     eb_item.order = (item.order or "") .. "z"
-    eb_item.localised_name = {
-        "",
-        "[virtual-signal=entangled-belts]",
-        { "entity-name." .. item.name }
-    }
-
     eb_item.icon = nil
 
     local icons = {}

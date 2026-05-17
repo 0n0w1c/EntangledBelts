@@ -19,8 +19,7 @@ for _, underground_belt in pairs(original_belts) do
 
     eb_entity.name = "eb-" .. underground_belt.name
     eb_entity.localised_name = {
-        "",
-        "[virtual-signal=entangled-belts]",
+        "entity-name.eb-entangled-belts",
         { "entity-name." .. underground_belt.name }
     }
 
